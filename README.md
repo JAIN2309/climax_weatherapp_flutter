@@ -1,21 +1,58 @@
+# 🌤️ Weather Presentation App v3
 
-Weather Presentation App v3 (GetX + Open-Meteo)
-===============================================
+![Flutter](https://img.shields.io/badge/Flutter-Framework-blue?logo=flutter)
+![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-This version includes:
-- SVG icon pack and subtle animations (animated gradients)
-- Area-mode aggregation: sample multiple points in an area and average weather
-- Fixed layout issues and improved UI (Google Weather inspired)
-- Uses Open-Meteo (no API key required)
+A modern weather presentation app built with **Flutter** & **GetX**, inspired by **Google Weather**.  
+It uses the free **[Open-Meteo API](https://open-meteo.com/)** (no API key required), supports **area-based weather aggregation**, and includes smooth **animations & SVG icons**.
 
-How to run
-----------
-1. Unzip and open project folder.
-2. Run `flutter pub get`
-3. Add permissions (AndroidManifest / Info.plist) as required.
-4. Run on a device: `flutter run`
+---
 
-Notes
------
-- The app samples 6 points around the center for area aggregation by default.
-- SVG icons are in assets/icons/ and rendered with flutter_svg.
+## ✨ Features
+- 📍 **Current location weather** (GPS support)
+- ➕ **Save & manage multiple areas** (add/update/delete/sort)
+- 🌍 **Area-mode aggregation** → samples 6 points around center and averages data  
+- ⏱️ **Auto-refresh every 2 minutes** + manual **pull-to-refresh**
+- ⏳ **Hourly forecast scrolling** with local device time
+- 🎨 **Modern UI** with animated gradients, subtle cloud/rain animations, and SVG icon pack
+- 💾 **Local caching** with `SharedPreferences` for fast reloads
+- 🚀 Built using **GetX** for state management and clean architecture
+- 
+---
+
+## 🛠️ Tech Stack
+- **Flutter** (3.x+)
+- **GetX** (State management + Dependency injection)
+- **Dio/HTTP** (Networking)
+- **SharedPreferences** (Local caching)
+- **flutter_svg** (SVG weather icons)
+- **Lottie / CustomPainter** (Smooth animations)
+- **flutter_native_splash** & **flutter_launcher_icons** (App branding)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK (>=3.0)
+- Android Studio / Xcode for device simulation
+- A real device for GPS-based location testing
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/weather_presentation_app_v3.git
+
+# Navigate into the project
+cd weather_presentation_app_v3
+
+# Install dependencies
+flutter pub get
+
+# Run with splash and icon setup
+flutter pub run flutter_launcher_icons:main
+flutter pub run flutter_native_splash:create
+
+# Launch app
+flutter run
